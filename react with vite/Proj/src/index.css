@@ -1,0 +1,247 @@
+/* Reset some default browser styles */
+html, body, #root, .App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; /* Ensure full viewport height */
+}
+
+/* Global styles from ecommerce/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Darker background */
+    color: #e0e0e0; /* Lighter text */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #b71c1c; /* Light red header */
+    padding: 1em 5%; /* Add horizontal padding */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items */
+}
+
+header h1 {
+    margin: 0;
+    color: #e0e0e0;
+    flex-grow: 1; /* Allow title to take available space */
+    text-align: left; /* Align title to the left */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: 1200px; /* Fixed width for consistent sizing */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #282828; /* Gray content background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for professionalism */
+    flex-grow: 1; /* Allow container to expand within main */
+    min-height: 100%; /* Ensure container takes full height */
+}
+
+main {
+    flex-grow: 1; /* Allow main content to expand and push footer down */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #b71c1c; /* Light red footer */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Each product occupies a whole row */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    background-color: #3a3a3a; /* Slightly lighter gray for product items */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left; /* Align text to left */
+    display: flex; /* Use flexbox for internal layout */
+    align-items: center; /* Vertically align items */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover */
+}
+
+.product-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Pop out effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.product-item img {
+    max-width: 120px; /* Make images a bit larger */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 4px;
+}
+
+.product-item-details {
+    flex-grow: 1; /* Allow details to take available space */
+}
+
+.product-item h3 {
+    color: #ff5252; /* Light red for product titles */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #ff5252;
+    font-size: 1.1em;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #ff5252;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.stat-item h3 {
+    color: #ff5252;
+    margin-bottom: 5px;
+}
+
+/* Login Page Styles */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #282828; /* Darker background */
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+  color: #e0e0e0; /* Lighter text */
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e0e0e0; /* Lighter text */
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #3a3a3a; /* Darker input background */
+  color: #e0e0e0; /* Lighter input text */
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.login-container p {
+  margin-top: 20px;
+  color: #e0e0e0; /* Lighter text */
+}
+
+.login-container .toggle-form {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-container .toggle-form:hover {
+  color: #0056b3;
+}
