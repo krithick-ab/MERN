@@ -5,10 +5,10 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bcrypt from "bcryptjs";
 
-dotenv.config();
+dotenv.config({ path: 'e:\\mern_intern\\react with vite\\Proj\\bend\\.env' });
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 import authRoutes from "./routers/authRoutes.js";
